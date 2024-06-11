@@ -14,8 +14,8 @@ return new class extends Migration
      *      'number_of_carriages' UNSIGNED TINYINT NULL,
      *      'departure_station' VARCHAR(255) NOT NULL,
      *      'arrival_station' VARCHAR(255) NOT NULL,
-     *      'departure_time TIME,
-     *      'arrival_time' TIME,
+     *      'departure_time DATETIME,
+     *      'arrival_time' DATETIME,
      *      'in_time' UNSIGNED TINIYNT NOT NULL DEFAULT(1)
      *      'delete' UNSIGNED TINIYNT NOT NULL DEFAULT(0)
      *       PRIMARY KEY ('train_code')
@@ -30,8 +30,8 @@ return new class extends Migration
             $table->unsignedTinyInteger('number_of_carriages')->nullable();
             $table->string('departure_station');
             $table->string('arrival_station');
-            $table->time('departure_time');
-            $table->time('arrival_time');
+            $table->dateTime('departure_time');
+            $table->dateTime('arrival_time');
             $table->boolean('in_time')->default(true);
             $table->boolean('delete')->default(false);
         });
