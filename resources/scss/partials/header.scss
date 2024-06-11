@@ -1,23 +1,25 @@
 header {
-    
     width: 100%;
     height: 70px;
-    border: 1px solid black;
 }
 ul {
     margin-block-start: 0 !important;
     margin-block-end: 0 !important;
     margin-bottom: 0 !important;
     li {
+
         list-style: none;
         a {
+            font-size: 30px;
+            color: white !important;
+            font-weight: bold;
             text-decoration: none;
         }
     }
 }
 img {
-    width: 100px;
+    width: 150px;
 }
 .active {
-    border-bottom: 1px solid blue;
+    border-bottom: 3px solid white;
 }

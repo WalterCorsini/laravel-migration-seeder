@@ -1,3 +1,8 @@
 @use "./partials/header";
 @import "~bootstrap";
 @import "~fontawesome";
+
+body{
+    background-image: url(../img/sfondo.jpg);
+    background-size: cover;
+}
