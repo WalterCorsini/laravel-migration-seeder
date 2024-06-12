@@ -11,7 +11,7 @@ class TrainController extends Controller
     {
         $curDate = date('Y-m-d');
 
-        $trainList = Train::whereDate('departure_time', $curDate)->get();
+        $trainList = Train::whereDate('departure_time', ">", $curDate)->get();
         // dd($trainList);
         return view('train', compact('trainList'));
     }
