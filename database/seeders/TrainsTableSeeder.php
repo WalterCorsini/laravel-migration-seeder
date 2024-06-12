@@ -23,8 +23,8 @@ class TrainsTableSeeder extends Seeder
             $train->arrival_station = $faker->city();
             $train->departure_time = $faker->dateTimeBetween('-1 day','+1 day');
             $train->arrival_time = $faker->dateTimeBetween('+1 day','+2 day');
-            $train->in_time = $faker->randomElement(['1','0']);
-            $train->delete = $faker->randomElement(['1','0']);
+            $train->in_time = $faker->boolean();
+            $train->delete = $faker->boolean();
             // dd($train);
             $train->save();
         }
