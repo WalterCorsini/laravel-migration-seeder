@@ -25,7 +25,8 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table){
             //  campi da inserire
-            $table->unsignedBigInteger('train_code')->unique; // treni hanno codice da 12 cifre numeriche univoco verrà usato come id.
+            $table->id();
+            $table->unsignedBigInteger('train_code');  // il treno puo fare piu viaggi e piu tratte.
             $table->string('name');  // possono avere lo stesso nome (freccarossa,frecciargento.... ma no lo stesso train_code che gli distingue)
             $table->unsignedTinyInteger('number_of_carriages')->nullable();
             $table->string('departure_station');
