@@ -15,8 +15,9 @@ class TrainsTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create('it_IT');
         $train = new Train();
+        $train->train_code = $faker->numberBetween(111111111111,999999999999);
         $train->name = $faker->randomElement(['Freccia Gialla','Freccia Rossa','Freccia Argento','Trenitalia']);
-        $train->number_of_carriage = $faker->numberBetween(1,10);
+        $train->number_of_carriages = $faker->numberBetween(1,10);
         $train->departure_station = $faker->city();
         $train->arrival_station = $faker->city();
         $train->departure_time = $faker->dateTimeBetween('-1 week','+1 week');

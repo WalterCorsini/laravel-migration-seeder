@@ -34,6 +34,7 @@ return new class extends Migration
             $table->dateTime('arrival_time');
             $table->boolean('in_time')->default(true);
             $table->boolean('delete')->default(false);
+            $table->timestamps();
         });
     }
 

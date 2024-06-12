@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Train;
-use DateTime;
 use Illuminate\Http\Request;
 
 class TrainController extends Controller
