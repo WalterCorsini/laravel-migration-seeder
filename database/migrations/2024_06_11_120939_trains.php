@@ -9,16 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      *  CREATE TABLE 'trains' (
-     *      'code_train' Unsigned BIGINT NOT NULL,
-     *      'name' VARCHAR(255) NOT NULL,
-     *      'number_of_carriages' UNSIGNED TINYINT NULL,
-     *      'departure_station' VARCHAR(255) NOT NULL,
-     *      'arrival_station' VARCHAR(255) NOT NULL,
-     *      'departure_time DATETIME,
-     *      'arrival_time' DATETIME,
-     *      'in_time' UNSIGNED TINIYNT NOT NULL DEFAULT(1)
-     *      'delete' UNSIGNED TINIYNT NOT NULL DEFAULT(0)
-     *       PRIMARY KEY ('train_code')
+     *      'id'                    UNIQUE PRIMARY KEY NOT NULL AUTO_INCREMENT
+     *      'code_train'            UNSIGNED BIGINT NOT NULL,
+     *      'name'                  VARCHAR(255) NOT NULL,
+     *      'number_of_carriages'   UNSIGNED TINYINT NULL,
+     *      'departure_station'     VARCHAR(255) NOT NULL,
+     *      'arrival_station'       VARCHAR(255) NOT NULL,
+     *      'departure_time         DATETIME,
+     *      'arrival_time'          DATETIME,
+     *      'in_time'               UNSIGNED TINIYNT NOT NULL DEFAULT(1)
+     *      'delete'                UNSIGNED TINIYNT NOT NULL DEFAULT(0)
+     *       PRIMARY KEY ('id')
      *  )
      */
     public function up(): void
